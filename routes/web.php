@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +14,14 @@ use App\Http\Controllers\MainController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//Auth
+Route::get('/auth/signup', [AuthController::class,'signup']);
+Route::post('/auth/registr', [AuthController::class,'registr']);
+
+//Article
+Route::resource('/article', ArticleController::class);
+
+
 
 Route::get('/', [MainController::class, 'index']);
 Route::get('galery/{img}/{name}', function($img, $name){

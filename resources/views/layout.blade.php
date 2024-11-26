@@ -27,13 +27,16 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/article">Articles</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/about">О нас</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contact">Контакты</a>
-        <!-- </li>
-        <li class="nav-item dropdown">
+        </li>
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
@@ -45,7 +48,7 @@
           </ul>
         </li> -->
       </ul>
-        <button class="btn btn-outline-success" type="submit">Sight up</button>
+        <a href="/auth/signup" class="btn btn-outline-success">SighUp</a>
     </div>
   </div>
 </nav>
