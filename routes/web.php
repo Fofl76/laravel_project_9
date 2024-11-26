@@ -14,7 +14,9 @@ use App\Http\Controllers\MainController;
 */
 
 Route::get('/', [MainController::class, 'index']);
-
+Route::get('galery/{img}/{name}', function($img, $name){
+    return view('main.galery',['img'=>$img, 'name'=>$name]);
+});
 
 Route::get('/about', function () {
     return view('main.about');

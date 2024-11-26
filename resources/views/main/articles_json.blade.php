@@ -19,7 +19,7 @@
       <td>{{$article -> name}}</td>
       <td>{{$article -> shortDesc}}</td>
       <td>{{$article -> desc}}</td>
-      <td><img src="{{$article -> preview_image}}" alt="" class="img-thumbnail"></td>
+      <td><a href="/galery/{{$article -> full_image}}/{{$article -> name}}"><img src="{{$article -> preview_image}}" alt="" class="img-thumbnail"></a></td>
     </tr>
     @endforeach
   </tbody>
