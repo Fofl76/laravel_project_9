@@ -77,8 +77,8 @@ class ArticleController extends Controller
         $article -> name = $request-> name;
         $article -> desc = $request-> desc;
         $article -> user_id = 1;
-        $article -> save();
-        return redirect('/article');
+        if ($article->save()) return redirect('/article')->with('status','Update success');
+        else return redirect()->route('article.index')->with('status','Update don`t success'); 
     }
 
     /**

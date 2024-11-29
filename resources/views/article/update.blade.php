@@ -21,13 +21,19 @@
 </form>
 
 @if ($errors->any())
-    <div id="toast-container">
-        @foreach ($errors->all() as $error)
-            <div class="toast-message alert alert-danger">
-                {{$error}}
-            </div>
-        @endforeach
-    </div>
+  <div class="alert-danger">
+     <ul>
+      @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+      @endforeach
+    </ul>
+  </div>
+@endif
+
+@if(session('status'))
+  <div class="alert alert-danger">
+      {{ session('status') }}
+  </div>
 @endif
 
 @endsection
