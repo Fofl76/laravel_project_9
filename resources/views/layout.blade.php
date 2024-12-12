@@ -30,9 +30,14 @@
       <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/article">Articles</a>
         </li>
+        @can('create')
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/article/create">Create Articles</a>
+            <a class="nav-link active" aria-current="page" href="/article/create">Create article</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/comment/index">All comments</a>
+        </li>
+        @endcan
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/about">О нас</a>
         </li>
