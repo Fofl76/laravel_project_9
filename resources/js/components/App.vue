@@ -1,4 +1,3 @@
-
 <template>
     <div v-if="article != null" class="alert alert-primary" role="alert">
         Добавлена новая статья <strong> <a :href="`/article/${article.id}`"> {{ article.name }}</a></strong>

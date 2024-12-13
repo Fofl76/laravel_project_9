@@ -27,7 +27,7 @@
       <td>{{$comment->desc}}</td>
       <td>{{ User::findOrFail($comment->user_id)->name }}</td>
        <td class="text-center">
-       @if(!$comment->accept)
+      @if(!$comment->accept)
        <a class="btn btn-success" href="/comment/{{$comment->id}}/accept">Accept</a>
       @else
         <a class="btn btn-warning" href="/comment/{{$comment->id}}/reject">Reject</a></td>
